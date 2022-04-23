@@ -1,0 +1,69 @@
+<div class="main-container">
+  <div id="top-section">
+    <div id="top-section-content">
+    <h1>Doctor as God</h1>
+    <p>Like Education Health care also needs to be given importance</p>
+    <button  routerLink="/logindoctor" routerLinkActive="active-link" class="bookappoint" style="trial"type="submit" value="submit">Doctor Login</button>
+    <button  routerLink="/patientlogin" routerLinkActive="active-link" class="bookappoint" style="trial"type="submit" value="submit">Patient Login</button>
+
+    </div>
+  </div>
+  
+  <div class="container" id="feature-section">
+    
+    <h1>SERVICES</h1>
+    <hr>
+    <div class="feature-content">
+          <button class="col-3">
+            <img routerLink="/gallery" routerLinkActive="active-link"  src="assets/dental.jpg">
+            <h3  class="overlay">Dental-Service</h3>
+          </button>     
+        <button class="col-3">
+            <img routerLink="/gallery" routerLinkActive="active-link"  src="assets/Lab.jpg">
+            <h3 class="overlay">Laboratory</h3>
+        </button>
+        <button class="col-3">
+            <img routerLink="/gallery" routerLinkActive="active-link"   src="assets/card.jpg">
+            <h3 class="overlay">Cardiology</h3>    
+        </button>
+        <button class="col-3">
+            <img routerLink="/gallery" routerLinkActive="active-link"  src="assets/neurology.jpg">
+            <h3 class="overlay">Neurology</h3>    
+        </button>
+    </div>
+</div>
+<hr>
+<div id="showcase1-container">
+  <div class="showcase">
+      <div class="col-2">
+          <img class ="showcasepic" src="https://i.pinimg.com/originals/ea/7f/2d/ea7f2dd47969349da148ea0b4ec56815.gif">
+      </div>
+          <div class="col-2">
+          <div class="feature-text">
+          <h3 class="section-title">"The best way to find yourself is to lose yourself in the service of others."</h3>
+          <p class="section-left">-Mahatma Gandhi</p>
+          </div>
+          </div>    
+  </div>    
+</div>
+<div class="last-content">
+<h1>News</h1>
+<div class="content">
+  <div class="col-4">
+      <img src="assets/pcos.jpg">
+      <h3>Polycystic Ovarian Syndrome Symptoms And Treatment</h3> 
+      <button class="blog"><a style="text-decoration:none;color:black" href="https://www.mrmed.in/health-library/womens-health/pcos-symptoms-treatment" target="_blank">Read more</a></button>    
+  </div>
+  <div class="col-4">
+      <img src="assets/diabetes.jpg">
+      <h3>Everything you need to know about type 1.5 Diabetes</h3>
+      <button class="blog"><a style="text-decoration:none ; color:black" href="https://www.mrmed.in/health-library/diabetes/type-15-diabetes" target="_blank">Read more</a></button>     
+  </div>
+  <div class="col-4">
+      <img src="assets/meno.jpg">
+      <h3>How to Manage Menopause Symptoms, Details and Advice</h3>   
+      <button class="blog"><a style="text-decoration:none ; color: black" href="https://www.mrmed.in/health-library/womens-health/manage-menopause-symptoms" target="_blank">Read more</a></button>   
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet> 

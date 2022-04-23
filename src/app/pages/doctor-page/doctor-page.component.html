@@ -1,0 +1,119 @@
+
+<div class="appointmetn-form">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">App  Id</th>
+        <th scope="col">Service</th>
+        <th scope="col">Appointment Date</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let item of patientData">
+        <th scope="row">{{item.appintmentId}}</th>
+        <td>{{item.service}}</td>
+        <td>{{item.appointmentDate}}</td>
+        <td > <span (click)="getSinglePatientdata(item.appintmentId)">Generate Report</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <form [formGroup]="reportGenerationForm">
+
+    <!-- <div class="form-control">
+      <label>Appintment ID</label>
+      <input
+        type="text"
+        placeholder="Enter Your ID Appintment ID"
+        formControlName="id"
+      />
+    </div> -->
+    <div class="form-control">
+      <label>Id</label>
+      <input
+        type="text"
+        [readonly]="true"
+        placeholder="Your Appointment Id"
+        formControlName="ReportId"
+      />
+    </div>
+
+    <div class="form-control">
+      <label>Service</label>
+      <input
+        type="text"
+        [readonly]="true"
+        formControlName="Service"
+        placeholder="Service"
+      />
+    </div>
+
+    <div class="form-control">
+      <label>Appointment Date</label>
+      <input [readonly]="true" formControlName="AppointmentDate" placeholder="Appointment Date" />
+    </div>
+ 
+
+
+
+
+
+    <div class="form-control">
+      <label for="service">Patient Details</label>
+      <textarea [class.is-invalid]="patientDetails?.invalid && patientDetails?.touched" placeholder="Patient Details" type="text" formControlName="patientDetails" ></textarea>
+      <small class="text-danger" [class.d-none]="patientDetails?.valid||patientDetails?.untouched">patient data is required</small>
+    </div> 
+
+    <div class="form-control">
+      <label>Treatment</label>
+      <textarea
+      [class.is-invalid]="TreatmentDetails?.invalid && TreatmentDetails?.touched" 
+        placeholder="Treatment Details"
+        formControlName="treatmentDetails"
+        type="text"
+      ></textarea>
+      <small class="text-danger" [class.d-none]="TreatmentDetails?.valid||TreatmentDetails?.untouched">Treatment data is required</small>
+
+    </div>
+
+    <div class="form-control">
+      <label for="comment">Recommendation</label>
+      <textarea
+      [class.is-invalid]="recommendation?.invalid && recommendation?.touched" 
+        formControlName="Recommendation"
+        placeholder="Recommendation"
+      ></textarea>
+      <small class="text-danger" [class.d-none]="recommendation?.valid||recommendation?.untouched">Recommendation is required</small>
+    </div>
+
+
+
+
+ <div class="btn">
+  <button  [disabled]="!reportGenerationForm.valid" type="submit" (click)="generatereports()" type="submit">
+   Generate Report
+  </button>
+ </div> -
+
+
+    
+  </form>
+
+</div>
+
+
+  <!-- <tbody>
+    <tr *ngFor ="let item of dataPaitent">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.firstname}}</td>
+      <td>{{item.lastname}}</td>
+      <td>{{item.phonenumber}}</td>
+      <td > <span (click)="generatereport()">Delete</span></td>
+    </tr>
+  </tbody>
+ -->
+
+

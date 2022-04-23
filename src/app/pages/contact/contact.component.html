@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm" id="heading-part">
+        <p id="col-1">WELCOME TO</p>
+        <h3 id="col-1">Mastek Health Care</h3>
+            <p id="col-2">MULTI-SPECIALITY HOSPITAL & RESEARCH CENTRE</p>
+      </div>
+      <div class="col-sm" id="heading-part-2">
+        <h4 id="col-1">Looking for a</h4>
+        <h3 id="col-1">DOCTOR</h3>
+        <p id="col-2">at Mastek Health Care</p>
+      </div>
+      <div class="col-sm" id="heading-part">
+        <h4 style="font-size: x-large;" id="col-1">EMERGENCY NUMBER</h4>
+        <h2 style="font-size: x-large;" id="col-1">022 1234 5678</h2>
+      </div>
+    </div>
+  </div>
+
+<div class="address" id="address-img">
+    <div class="card text-white" id="Searchbtn">
+        <img class="card-img" src="../../../assets/image/title.jpg" alt="" height="130px">
+        <div class="card-img-overlay">
+            <h3 class="card-title" id="reachus">Reach Us </h3>
+            <!--  -->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1 style="text-align: center; font-size: 1.8em;">Mastek Ltd (Mahape)</h1>
+        <hr>
+        <h3 style="font-size: 1.5em; font-style: initial; font-weight: 400; text-align: center;">Mastek, Millennium Centre,<br/>
+            Millenium Business Park,
+            Mahape <br/> TTC
+            Navi Mumbai â€“ 400 710
+            <br/>
+            Phone: +91 22 6791 4646</h3>
+      </div>
+      <div class="col-sm">
+        <h1 style="text-align: center; font-size: 1.8em;">Mastek Ltd (Pune)</h1>
+        <hr>
+        <h3 style="font-size: 1.5em; font-style: initial; font-weight: 400; text-align: center;">Cerebrum IT park
+            B-1,<br/> Second floor
+            Kalyani Nagar<br/>
+            Pune â€“ 411 014
+            <br/>
+            Phone: 020 270 32016</h3>
+      </div>
+    </div>
+</div>
+   
+<div class="container-fluid bg-primary" style="color: white; margin-top: 2%; background-color: rgb(51, 51, 112); text-align: center; font-size: 1.7em;">
+    <h3>Connect With Us</h3>
+</div>
+
+<div class="connectus">
+    <form  [formGroup]="contactForm" (ngSubmit)="conatct()">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" formControlName="firstname" placeholder="First name">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" formControlName="lastname" placeholder="Last name">
+                <br/>
+            </div>
+        </div>
+    <div class="form-group">
+        <input formControlName="email" class="form-control" type="email" id="email" placeholder="Enter email">
+    </div>
+    <br/>
+    <div class="form-group">
+        <textarea  formControlName="usermeassgae" class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+    </div><br/>
+    <button class="send" type="submit">Send</button><br/>
+</form>
+</div>
+
+<div class="last">
+    <div class="last-col3" id="last-col1">
+        <h1>Emergency & Trauma</h1>
+        <p>Emergency & Trauma care is well Backed up by Intensive Care Unit of hospital, Operation Theatre, Dialysis, Cath Lab, Blood bank & ultra modern Diagnostic Facility With Computerised Complete pathology, & Imaging</p>
+    </div>
+    <div class="last-col3" id="last-col2">
+        <h1>Health Checkups</h1>
+        <p>Criticare Multispeciality Hospital & Research Centre had been setup almost one decade back with aim to provide quality healthcare to the people. This ultramodern, multi-speciality care hospital has a spectrum</p>
+    </div>
+    <div class="last-col3" id="last-col4">
+        <h1>24 Hours Service<br/>
+            022-1234 5678<br/>
+            
+            info@mastekhealth-wealth.in</h1>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+
+.container-fluid{
+    background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    /* color:var(--secondary-color); */
+    /* background-color: white; */
+    font-size: 0.95rem;
+    margin: 0 15px;
+    border-radius: 10px;
+}
+.navbar-light .navbar-nav .nav-link.active-link{
+    color:var(--active-color);
+    background-color:#6495ED;
+}
+.navbar-nav{
+    font-weight: 700;
+}
+
+/* .nav_header_logo {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+    position: center;
+    z-index: 2;
+    /* background:	#6495ED; */
+    /* transform: skew(-7deg);
+    color: white;
+    background-image: url("src/assets/logo.png");
+} */ 
+img{
+    height: 130px;
+    width: 100%;
+    padding-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+}
+
+a:hover {
+    background-color: 	#1E90FF;
+    transition: 0.25s;
+    color:var(--active-color);
+}

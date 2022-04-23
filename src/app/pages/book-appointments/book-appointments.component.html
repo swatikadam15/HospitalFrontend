@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  </head>
+  <body class="appointmetn-form">
+    <h1 id="title">Book Appointment</h1>
+    <!-- <h5 class="para title">If you have already book appointment and want to cancel that appointment please <a routerLink="/cancel" >click here </a></h5> -->
+    <p id="description">
+    </p>
+
+    <form [formGroup]="bookappoinmentForm" (ngSubmit)="bookappointment()">
+
+      <div class="form-control">
+        <label for="service">Choose Service</label>
+        <select [class.is-invalid]="service?.invalid && service?.touched"  formControlName="service">
+          <option *ngFor="let dept of departments" [value]="dept.value" >
+            {{ dept.viewValue }}
+          </option>
+        </select>
+        <small class="text-danger" [class.d-none]="service?.valid||service?.untouched">Service is required</small>
+      </div>
+
+
+      <div class="form-control">
+        <label >Appointment Date</label>
+        <input formControlName="AppointmentDate" type="date"
+        [class.is-invalid]="appiontmentdate?.invalid && appiontmentdate?.touched"
+        />
+        <small class="text-danger" [class.d-none]="appiontmentdate?.valid||appiontmentdate?.untouched">Date is required</small>
+
+      </div>
+
+
+      <div class="form-control">
+        <label for="comment">Appointment Message</label>
+        <textarea
+        formControlName="AppointmentMesaage"
+          placeholder="Enter Your Comment here...."
+        ></textarea>
+  
+      </div>
+
+      <div class="form-control">
+        <label for="comment">Appointment Time</label>
+        <select formControlName="AppoinmentTime" >
+          <option>Choose time</option>  
+          <option *ngFor="let t of time" [value]="t.value" >
+            {{ t.viewValue }}
+          </option>
+        </select>
+      </div>
+    
+
+      <button [disabled]="!bookappoinmentForm.valid" type="submit">Submit</button>
+      <h6 class="para title">If you have already book appointment and want to cancel that appointment please <a routerLink="/cancel" >click here </a></h6>
+    </form>
+  </body>
+</html>
+
